@@ -1,0 +1,3 @@
+/Users/sunilaher1/SunilC++Interview/EventSche/build/CMakeFiles/EventSche.dir
+/Users/sunilaher1/SunilC++Interview/EventSche/build/CMakeFiles/edit_cache.dir
+/Users/sunilaher1/SunilC++Interview/EventSche/build/CMakeFiles/rebuild_cache.dir

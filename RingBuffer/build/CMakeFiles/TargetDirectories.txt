@@ -1,0 +1,3 @@
+/Users/sunilaher1/SunilC++Interview/RingBuffer/build/CMakeFiles/RingBuffer.dir
+/Users/sunilaher1/SunilC++Interview/RingBuffer/build/CMakeFiles/edit_cache.dir
+/Users/sunilaher1/SunilC++Interview/RingBuffer/build/CMakeFiles/rebuild_cache.dir
