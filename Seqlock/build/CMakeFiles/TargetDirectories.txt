@@ -1,0 +1,3 @@
+/Users/sunilaher1/HFTQuestion/Seqlock/build/CMakeFiles/Seqlock.dir
+/Users/sunilaher1/HFTQuestion/Seqlock/build/CMakeFiles/edit_cache.dir
+/Users/sunilaher1/HFTQuestion/Seqlock/build/CMakeFiles/rebuild_cache.dir

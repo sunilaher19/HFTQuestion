@@ -1,0 +1,1 @@
+g++-15  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/Seqlock.dir/src/seqLock.cpp.o -o Seqlock
