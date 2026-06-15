@@ -28,13 +28,24 @@ private:
 
 public:
     void write(const T& value){
-         m_seq.fetch_add(1, std::memory_order_relaxed);
-        m_data = value;
-        m_seq.fetch_add(1, std::memory_order_release);
+        uint64_t curr_seq = m_seq.load(std::memory_order_relaxed);
+         
+        m_seq.store(curr_seq + 1, std::memory_order_release);
+        std::atomic_thread_fence(std::memory_order_release);
+        std::memcpy(&m_data, &value, sizeof(T));
+        std::atomic_thread_fence(std::memory_order_release);
+        m_seq.store(curr_seq + 2, std::memory_order_release);
     }
 
-    T read() const{
-        return m_data;
+    T read(uint64_t& seq1, uint64_t& seq2) const {
+        T local_data;
+
+        seq1 = m_seq.load(std::memory_order_acquire);
+        std::memcpy(&local_data, &m_data, sizeof(T));
+        std::atomic_thread_fence(std::memory_order_acquire);
+        seq2 = m_seq.load(std::memory_order_relaxed);
+
+        return local_data;
     }
 
     uint64_t getSequence()
@@ -52,13 +63,9 @@ void reader(SeqLock<T>& seq, std::atomic<bool>& running)
         T data;
 
         do {
-            seq1 = seq.getSequence();
-
-            data = seq.read();
-
-            seq2 = seq.getSequence();
-
-        } while (seq1 != seq2 || (seq1 & 1));
+            data = seq.read(seq1, seq2); 
+            
+        } while ((seq1 & 1) || seq1 != seq2);
 
         cout << "data=" << data << " seq=" << seq1 << endl;
     }
