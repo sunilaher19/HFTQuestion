@@ -1,0 +1,3 @@
+/Users/sunilaher1/HFTQuestion/Ticker/build/CMakeFiles/Ticker.dir
+/Users/sunilaher1/HFTQuestion/Ticker/build/CMakeFiles/edit_cache.dir
+/Users/sunilaher1/HFTQuestion/Ticker/build/CMakeFiles/rebuild_cache.dir

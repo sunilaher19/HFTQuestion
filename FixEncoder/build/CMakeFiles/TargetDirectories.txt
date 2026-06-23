@@ -1,0 +1,3 @@
+/Users/sunilaher1/HFTQuestion/FixEncoder/build/CMakeFiles/FixEncoder.dir
+/Users/sunilaher1/HFTQuestion/FixEncoder/build/CMakeFiles/edit_cache.dir
+/Users/sunilaher1/HFTQuestion/FixEncoder/build/CMakeFiles/rebuild_cache.dir
