@@ -1,0 +1,3 @@
+/Users/sunilaher1/HFTQuestion/RollingCounter/build/CMakeFiles/RollingCounter.dir
+/Users/sunilaher1/HFTQuestion/RollingCounter/build/CMakeFiles/edit_cache.dir
+/Users/sunilaher1/HFTQuestion/RollingCounter/build/CMakeFiles/rebuild_cache.dir
